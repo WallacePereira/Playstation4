@@ -5,20 +5,19 @@
 #include <string>
 #include <conio.h>
 #include "Data.h"
-#include "Endereco.h"
+
 
 using namespace std;
 
 Playstation4::Playstation4()
-:dataNascimento(01,01,1900), dadosEndereco("Rua",0,"bairro","cidade","estado")
-{
+:dataNascimento(01,01,1900),
     this -> nome= "nome";
     this -> idade= 0;
     this -> genero= "genero";
 }
 
 Playstation4::Playstation4(const Playstation4 &p)
-:dataNascimento(p.dataNascimento), dadosEndereco(p.dadosEndereco)
+:dataNascimento(p.dataNascimento),
 {
     this->nome = p.nome; 
     this->idade = p.idade;
@@ -50,21 +49,7 @@ const Playstation4 &Playstation4::operator=(const Playstation4 &gente)
     idade = gente.idade;
 }
 
-void Playstation4::setDadosEndereco()
-{   
-    string rua, bairro, cidade, estado;
-    int n;
-    cout<<"Rua: ";
-    cin>>rua;
-    cout<<"Numero: ";
-    cin>>n;
-    cout<<"Bairro: ";
-    cin>>bairro;
-    cout<<"Cidade: ";
-    cin>>cidade;
-    cout<<"Estado: ";
-    cin>>estado;
-    dadosEndereco.setEndereco(rua,n,bairro,cidade,estado);
+
 }
 
 void Playstation4::setDataNascimento()
