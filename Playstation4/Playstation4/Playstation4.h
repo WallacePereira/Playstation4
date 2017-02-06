@@ -16,6 +16,7 @@ public:
     void setIdade(int);
     void setGenero(const string &);
     void setDataNascimento();
+    void setDados();
     string getNome();
     int getIdade();
     string getGenero();
@@ -26,7 +27,7 @@ private:
     int idade;
     string genero; 
     Data dataNascimento;
-    
+    bool operator==(const Playstation4 &) const;
     const Playstation4 &operator=(const Playstation4 &);
 };
  
