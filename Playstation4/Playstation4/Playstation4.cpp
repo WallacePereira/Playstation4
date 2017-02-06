@@ -28,11 +28,11 @@ Playstation4::~Playstation4()
 {
 }
 
-ostream & operator<<(ostream &o, const Playstation4 &gente)
+ostream & operator<<(ostream &output, const Playstation4 &gente)
 {
-o <<"\nNome: "<<gente.nome<<".\n"<<"Idade: "<<gente.idade<<".\n"<<"Genero:  "<<gente.genero<<"\n";
+output<<"\nNome: "<<gente.nome<<".\n"<<"Idade: "<<gente.idade<<".\n"<<"Genero:  "<<gente.genero<<"\n";
 
-return o;
+return output;
 }
 
 bool Playstation4::operator==(const Playstation4 &gente) const
